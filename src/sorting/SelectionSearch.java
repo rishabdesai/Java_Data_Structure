@@ -1,5 +1,6 @@
 //sorting - arranging data in particular way (ascending or descending)
 //selection sort = select one element and compare it with all elements after that.
+//O(n2)
 
 package sorting;
 
