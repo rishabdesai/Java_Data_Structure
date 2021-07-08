@@ -37,4 +37,28 @@ If no element left to compare, then increment key (i+1) position.
 efficient for small data sets.
 
 * Quick Sort  O(n2)
+
+Its implementation is based on divide & conquer technique.
+Idea is to select any element in the list (say first) and call it pivot. Place the pivot element on the list so that all the numbers less than pivot will be on LHS and all the numbers greater then pivot will be on RHS of pivot. Hence we can partition the list in to two sub-lists. Now we can apply same procedure on each sub-list.
+
+	1. If single element or invalid partition, then stop
+	2. consider leftmost element as pivot
+	3. from left find element greater than pivot (ith element)
+	4. from right, find element less than or equal to pivot (jth element)
+	5. if i & j not crossed, then swap ith element with jth element.
+	6. repeat steps 2 to 4 till i & j cross each other.
+	7. swap jth element with pivot.
+	8. apply quick sort to left partition
+	9. apply quick sort to right partition.
+
 * Merge Sort  O(nlogn)
+
+Divide the whole array into two equal parts. Sort the two parts separately and Merge the two array in temporary array. Copy the temporary array into original array.
+
+	1. If single element or invalid partition, then stop
+	2. divide array into two equal partitions
+	3. apply merge sort to left partition (left to mid)
+	4. apply merge sort to right partition (mid+1 to right)
+	5. create temp. array to accommodate both partitions
+	6. merge both sorted partitions into temp array.
+	7. override temp array back to the main array.
