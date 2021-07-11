@@ -40,6 +40,7 @@ public class Stacks {
 		Scanner sc = new Scanner(System.in);
 		int choice, val;
 		Stack s = new Stack(5);
+		System.out.println("stack size is 5");
 		do {
 			System.out.print("\n 1.push\n2.pop\n3peek\n0exit");
 			choice = sc.nextInt();
