@@ -62,3 +62,17 @@ Divide the whole array into two equal parts. Sort the two parts separately and M
 	5. create temp. array to accommodate both partitions
 	6. merge both sorted partitions into temp array.
 	7. override temp array back to the main array.
+
+* Stack
+
+- Stack is utility data structure/ helper data structure / adaptor data structure.
+- Last-In-First-Out (LIFO)
+- Operations: push(), pop(), peek(), isEmpty(), isFull()
+- Purpose of stack is not to store data, rather to process the data. 
+- Stack is implemented using array or linked list.
+- push and pop operations are done from same end
+
+* Queue 
+
+- First-In-First-Out (FIFO)
+- push and pop operations are done from diffenent end (rear and front)
