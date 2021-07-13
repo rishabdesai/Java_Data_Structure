@@ -9,7 +9,7 @@ Data Structure using Java
 we can use it to search element in any sorted as well as un-sorted collection.
 If collection contains less no. of elements, then linear search is efficient.
 
-### Binary Search  O(logn)
+### Binary Search  O(log n)
 
 To overcome limitation of linear search, use binary search.
 We can use binary search on sorted collection/ array ONLY.
@@ -51,7 +51,7 @@ Idea is to select any element in the list (say first) and call it pivot. Place t
 8. apply quick sort to left partition
 9. apply quick sort to right partition.
 
-### Merge Sort  O(nlogn)
+### Merge Sort  O(nlog n)
 
 Divide the whole array into two equal parts. Sort the two parts separately and Merge the two array in temporary array. Copy the temporary array into original array.
 
@@ -75,4 +75,4 @@ Divide the whole array into two equal parts. Sort the two parts separately and M
 ### Queue 
 
 - First-In-First-Out (FIFO)
-- push and pop operations are done from diffenent end (rear and front)
+- push and pop operations are done from different end (rear and front)

@@ -2,7 +2,7 @@ package sorting;
 
 public class QuickSort {
 	public static void quickSort(int[] a, int left, int right) {
-		// 0. if single element presnt or invalid partition then stop.
+		// 0. if single element present or invalid partition then stop.
 		if (left >= right)
 			return;
 		// 1. consider left-most element as pivot element
