@@ -2,16 +2,16 @@ package sorting;
 
 public class QuickSort {
 	public static void quickSort(int[] a, int left, int right) {
-		// 0. if single element present or invalid partition then stop.
+		// 0. if single element or invalid partition then return -1.
 		if (left >= right)
 			return;
-		// 1. consider left-most element as pivot element
+		// 1. consider left-most element as pivot
 		int i = left, j = right, pivot = a[left];
 		while (i < j) {
-			// 2. from left find element greater than pivot - ith element
+			// 2. from left, find element greater than pivot - ith element
 			while (i <= right && a[i] <= pivot)
 				i++;
-			// 3. from right find element less or equal to pivot - jth element
+			// 3. from right, find element less or equal to pivot - jth element
 			while (j >= left && a[j] > pivot)
 				j--;
 			// 4. if i & j not crossed, then swap ith element with jth element
@@ -32,7 +32,7 @@ public class QuickSort {
 	}
 
 	public static void main(String[] args) {
-		int[] arr = { 102, 99, 6, 3, 9, 1, 7, 2, 8, 4, 5 };
+		int[] arr = { 6, 3, 9, 1, 2 };
 
 		quickSort(arr, 0, arr.length - 1);
 		for (int i = 0; i < arr.length; i++) {
