@@ -9,9 +9,11 @@ public class QuickSort {
 		int i = left, j = right, pivot = a[left];
 		while (i < j) {
 			// 2. from left, find element greater than pivot - ith element
+			// (from left, traverse till the element greater than pivot) 
 			while (i <= right && a[i] <= pivot)
 				i++;
 			// 3. from right, find element less or equal to pivot - jth element
+			// (from right, traverse till the element less or equal to pivot )
 			while (j >= left && a[j] > pivot)
 				j--;
 			// 4. if i & j not crossed, then swap ith element with jth element
