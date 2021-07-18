@@ -18,6 +18,13 @@ class BinarySearchTree {
 			this.right = null;
 		}
 
+		@Override
+		public String toString() {
+			return "Node [data=" + data + "]";
+		}
+		
+		
+
 	}
 
 	private Node root;
@@ -113,8 +120,64 @@ class BinarySearchTree {
 		System.out.print("Post-order values : ");
 		recPostOrder(root);
 	}
+	
+	//Delete Tree 
+	private void delTree(Node trav) {
+		if(trav ==null)
+			return;
+		delTree(trav.left);
+		trav.left=null;
+		delTree(trav.right);
+		trav.right=null;
+	}
 
+	public void delTree() {
+		delTree(root);
+		root=null;
+	}
 
+	//calculate the height of tree
+	private int recHeight(Node trav) {
+		if(trav == null)
+			return -1;
+		int htLeft = recHeight(trav.left);
+		int htRight = recHeight(trav.right);
+		int max = Integer.max(htLeft, htRight);
+		return max + 1;
+	}
+	public int recHeight() {
+		return recHeight(root);
+	}
+	
+// search (recursion)
+	private Node recSearch(Node trav, int val) {
+		if(trav ==null)
+			return null;
+		if(val ==trav.data)
+			return trav;
+		if(val <trav.data)
+			return recSearch(trav.left, val);
+		else
+			return recSearch(trav.right, val);
+	}
+	
+	public Node recSearch(int val) {
+		return recSearch(root, val);
+	}
+	
+	//search (non-recursive)
+	public Node find(int val) {
+		Node trav= root;
+		while(trav != null) {
+			if(val == trav.data )
+				return trav;
+			if(val <trav.data)
+				trav = trav.left;
+			else
+				trav= trav.right;
+	}
+	return null;
+}
 }
 
 public class BSTmain {
@@ -124,19 +187,45 @@ public class BSTmain {
 		BinarySearchTree bst = new BinarySearchTree();
 		bst.add(50);
 		bst.add(30);
-		bst.add(10);
-		bst.add(90);
-		bst.add(100);
-		bst.add(40);
 		bst.add(70);
-		bst.add(80);
 		bst.add(20);
+		bst.add(40);
 		bst.add(60);
+		bst.add(80);
 		
-		bst.recPreOrder();  	// 50 30 10 20 40 90 70 60 80 10
+		//
+		bst.recPreOrder();  	// 50 30 20 40 70 60 80 
 		System.out.println();
-		bst.recInOrder(); 		// 10 20 30 40 50 60 70 80 90 100 
+		bst.recInOrder(); 		// 20 30 40 50 60 70 80
 		System.out.println();
-		bst.recPostOrder(); 	// 20 10 40 30 60 80 70 100 90 50
+		bst.recPostOrder(); 	// 20 40 30 60 80 70 50 
+		System.out.println();
+		
+		//find height of a tree
+		System.out.println("--------------------");
+		System.out.println("height of a tree "+bst.recHeight());
+		System.out.println();
+		
+		// search
+		System.out.println("--------------------");
+		System.out.println();
+		BinarySearchTree.Node temp = bst.recSearch(80);
+		if(temp == null)
+			System.out.println("not found");
+		else
+			System.out.println(" found "+temp);
+		
+		//delete tree
+				System.out.println("--------------------");
+				System.out.println("after deleting tree");
+				bst.delTree();
+				bst.recPreOrder();  	// 50 30 20 40 70 60 80 
+				System.out.println();
+				bst.recInOrder(); 		// 20 30 40 50 60 70 80
+				System.out.println();
+				bst.recPostOrder(); 	// 20 40 30 60 80 70 50 
+				System.out.println();
+		
+		
 	}
 }
