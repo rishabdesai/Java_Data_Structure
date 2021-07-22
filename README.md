@@ -88,5 +88,6 @@ Divide the whole array into two equal parts. Sort the two parts separately and M
 ### RecursionQuestions
 
 - How to find sum of digits of a positive integer number using recursion
+- Find factorial of a number
 
 
