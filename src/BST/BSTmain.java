@@ -55,30 +55,19 @@ class BinarySearchTree {
 		}
 	}
 
-	//1a. Add Values to BST	(using recursion)	
-/*	private void addRecursive(Node trav, int val) {
-		if (val < trav.data) {
-			if (trav.left == null)
-				trav.left = new Node(val);
-			else
-				addRecursive(trav.left, val);
-		} else {
-			if (trav.right == null)
-				trav.right = new Node(val);
-			else
-				addRecursive(trav.right, val);
-		}
-	}
-
-	public void addRecursive(int val) {
-		if (root == null)
-			root = new Node(val);
-		else
-			addRecursive(root, val);
-	} */
+	// 1a. Add Values to BST (using recursion)
+	/*
+	 * private void addRecursive(Node trav, int val) { if (val < trav.data) { if
+	 * (trav.left == null) trav.left = new Node(val); else addRecursive(trav.left,
+	 * val); } else { if (trav.right == null) trav.right = new Node(val); else
+	 * addRecursive(trav.right, val); } }
+	 * 
+	 * public void addRecursive(int val) { if (root == null) root = new Node(val);
+	 * else addRecursive(root, val); }
+	 */
 
 //2. find recursive preOrder, inOrder, postOrder
-	//recursive preorder
+	// recursive preorder
 	private void recPreOrder(Node trav) {
 		if (trav == null)
 			return;
@@ -94,7 +83,7 @@ class BinarySearchTree {
 		recPreOrder(root);
 	}
 
-	//recursive inorder
+	// recursive inorder
 	private void recInOrder(Node trav) {
 		if (trav == null)
 			return;
@@ -110,7 +99,7 @@ class BinarySearchTree {
 		recInOrder(root);
 	}
 
-	//recursive postorder
+	// recursive postorder
 	private void recPostOrder(Node trav) {
 		if (trav == null)
 			return;
@@ -154,23 +143,36 @@ class BinarySearchTree {
 
 	public Node recSearch(int val) {
 		return recSearch(root, val);
-	} 
+	}
 
 //4a. search element (using non-recursive)
-/*	public Node find(int val) {
-		Node trav = root;
-		while (trav != null) {
-			if (val == trav.data)
-				return trav;
-			if (val < trav.data)
-				trav = trav.left;
-			else
-				trav = trav.right;
-		}
-		return null;
-	} */
+	/*
+	 * public Node find(int val) { Node trav = root; while (trav != null) { if (val
+	 * == trav.data) return trav; if (val < trav.data) trav = trav.left; else trav =
+	 * trav.right; } return null; }
+	 */
 
-//5. Delete Tree
+//5. print only leaf nodes
+	private static void printLeafs(Node trav) {
+		if (trav == null)
+			return;
+		if (trav.left == null && trav.right == null) {
+			System.out.print(trav.data + ", ");
+			return;
+		}
+		if (trav.left != null)
+			printLeafs(trav.left);
+		if (trav.right != null)
+			printLeafs(trav.right);
+	}
+
+	public void printLeafs() {
+		System.out.print(" Leaf nodes :   ");
+		printLeafs(root);
+		System.out.println();
+	}
+
+//6. Delete Tree
 	private void delTree(Node trav) {
 		if (trav == null)
 			return;
@@ -184,6 +186,7 @@ class BinarySearchTree {
 		delTree(root);
 		root = null;
 	}
+
 }
 
 public class BSTmain {
@@ -205,7 +208,7 @@ public class BSTmain {
 		bst.recInOrder(); // 20 30 40 50 60 70 80
 		bst.recPostOrder(); // 20 40 30 60 80 70 50
 		System.out.println();
-		
+
 //3. find height of a tree
 		System.out.println("--------------------");
 		System.out.println("height of a tree : " + bst.recHeight());
@@ -217,14 +220,17 @@ public class BSTmain {
 			System.out.println("not found");
 		else
 			System.out.println(" found " + temp);
+		System.out.println("--------------------");
+//5. print leaf nodes	
+		bst.printLeafs();
 
-//5. delete tree
+//6. delete tree
 		System.out.println("--------------------");
 		System.out.println("after deleting tree : ");
 		bst.delTree();
-		bst.recPreOrder(); 
-		bst.recInOrder(); 
-		bst.recPostOrder(); 
+		bst.recPreOrder();
+		bst.recInOrder();
+		bst.recPostOrder();
 
 	}
 }

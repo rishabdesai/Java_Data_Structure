@@ -1,7 +1,7 @@
 /* How to find sum of digits of a positive integer number using recursion
  */
 
-package RecursionQuestions;
+package recursionQuestions;
 
 public class FindSumOfDigits {
 	public static int sumofdigits(int n) {

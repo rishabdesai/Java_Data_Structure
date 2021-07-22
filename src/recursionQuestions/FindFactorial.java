@@ -1,5 +1,5 @@
 /* find factorial of number using recursion */
-package RecursionQuestions;
+package recursionQuestions;
 
 public class FindFactorial {
 
