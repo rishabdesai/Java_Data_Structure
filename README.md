@@ -63,6 +63,8 @@ Divide the whole array into two equal parts. Sort the two parts separately and M
 6. merge both sorted partitions into temp array.
 7. override temp array back to the main array.
 
+## Stack & Queue
+
 ### Stack
 
 - Stack is utility data structure/ helper data structure / adaptor data structure.
@@ -76,3 +78,15 @@ Divide the whole array into two equal parts. Sort the two parts separately and M
 
 - First-In-First-Out (FIFO)
 - push and pop operations are done from different end (rear and front)
+
+### BST (Binary Search Tree)
+
+- add,recPreOrder, recInOrder, recPostOrder, recHeight, recSearch, delTree  
+
+## Questions
+
+### RecursionQuestions
+
+- How to find sum of digits of a positive integer number using recursion
+
+
