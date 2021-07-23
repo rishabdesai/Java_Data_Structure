@@ -79,9 +79,27 @@ Divide the whole array into two equal parts. Sort the two parts separately and M
 - First-In-First-Out (FIFO)
 - push and pop operations are done from different end (rear and front)
 
+## Tree
+
 ### BST (Binary Search Tree)
+	![image](/JavaDataStructure/images/Tree-level-3 tree.png)
 
 - add,recPreOrder, recInOrder, recPostOrder, recHeight, recSearch, delTree  
+
+### DFS (Depth First Search)
+
+- use stack<Node>
+- push root on stack
+- pop a node from stack  - say trav
+- visit trav and print
+- if trav has right child, then push it on stack
+- if trav has left child, then push it on stack
+- repeat steps 2to5, until stack is empty. 
+
+### BFS (Breadth First Search)
+
+- Same as DFS, but use Queue and first push left on stack and then right.
+
 
 ## Questions
 

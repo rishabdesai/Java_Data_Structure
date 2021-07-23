@@ -1,6 +1,6 @@
 //linear queue is not recommended to use
 
-package Queue;
+package queue;
 
 class LinearQ{
 	private int[] arr;

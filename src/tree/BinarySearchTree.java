@@ -1,6 +1,6 @@
-package BST;
+package tree;
 
-class BinarySearchTree {
+class Bst {
 	static class Node {
 		private int data;
 		private Node left;
@@ -26,7 +26,7 @@ class BinarySearchTree {
 
 	private Node root;
 
-	public BinarySearchTree() {
+	public Bst() {
 		this.root = null;
 	}
 
@@ -189,11 +189,11 @@ class BinarySearchTree {
 
 }
 
-public class BSTmain {
+public class BinarySearchTree {
 
 	public static void main(String[] args) {
 
-		BinarySearchTree bst = new BinarySearchTree();
+		Bst bst = new Bst();
 //1. Add values to BST
 		bst.add(50);
 		bst.add(30);
@@ -215,7 +215,7 @@ public class BSTmain {
 
 //4. search element ( using recursion)
 		System.out.println("--------------------");
-		BinarySearchTree.Node temp = bst.recSearch(80);
+		Bst.Node temp = bst.recSearch(80);
 		if (temp == null)
 			System.out.println("not found");
 		else
