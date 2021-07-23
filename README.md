@@ -82,7 +82,7 @@ Divide the whole array into two equal parts. Sort the two parts separately and M
 ## Tree
 
 ### BST (Binary Search Tree)
-	![image](https://github.com/rishabdesai/Java_Data_Structure/blob/master/images/Tree-level-3%20tree.png)
+	![image](![Tree-level-3 tree](https://user-images.githubusercontent.com/31618460/126789103-f17245aa-148c-48dd-bd71-4f7e4d5c1f69.png))
 
 - add,recPreOrder, recInOrder, recPostOrder, recHeight, recSearch, delTree  
 
