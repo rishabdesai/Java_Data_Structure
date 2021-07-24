@@ -82,7 +82,8 @@ Divide the whole array into two equal parts. Sort the two parts separately and M
 ## Tree
 
 ### BST (Binary Search Tree)
-	![image](images/tree.png)
+
+![image](images/tree.png)
 
 - add,recPreOrder, recInOrder, recPostOrder, recHeight, recSearch, delTree  
 
