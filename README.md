@@ -1,6 +1,15 @@
 # Java_Data_Structure
 Data Structure using Java
 
+1. [Searching](#Searching)
+	* [Linear Search  O(n)](#Linear Search  O(n))
+	* [Binary Search  O(log n)](#Binary Search  O(log n))
+2. [Sorting](#Sorting)
+3. [Stack & Queue](#Stack & Queue)
+4. [Tree](#Tree)
+5. [Graph](#Graph)
+6. [Questions](#Questions)
+7. [Ref](#Ref)
 
 ## Searching
 
@@ -142,6 +151,6 @@ Divide the whole array into two equal parts. Sort the two parts separately and M
 - Find factorial of a number
 
 
-## Ref:
+## Ref
 
 - [freeCodeCamp](https://www.youtube.com/watch?v=IJDJ0kBx2LM)
