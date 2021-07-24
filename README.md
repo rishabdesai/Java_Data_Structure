@@ -82,12 +82,11 @@ Divide the whole array into two equal parts. Sort the two parts separately and M
 ## Tree
 
 ### BST (Binary Search Tree)
-
-![image](https://user-images.githubusercontent.com/31618460/126789103-f17245aa-148c-48dd-bd71-4f7e4d5c1f69.png)
+	![image](/JavaDataStructure/images/Tree-level-3 tree.png)
 
 - add,recPreOrder, recInOrder, recPostOrder, recHeight, recSearch, delTree  
 
-### DFS (Depth First Search)
+### DFS (Depth First Search) for Tree
 
 - use stack<Node>
 - push root on stack
@@ -97,10 +96,40 @@ Divide the whole array into two equal parts. Sort the two parts separately and M
 - if trav has left child, then push it on stack
 - repeat steps 2to5, until stack is empty. 
 
-### BFS (Breadth First Search)
+### BFS (Breadth First Search) for Tree
 
 - Same as DFS, but use Queue and first push left on stack and then right.
 
+
+## Graph
+
+### DFS (Depth First Search) for Graph
+
+- choose a vertex as start vertex.
+- Push start vertex on *stack* and mark it.
+- to mark, use an Boolean array with size = vertices
+- Pop vertex from stack.
+- Visit (Print) the vertex.
+- Pull all non-visited neighbors of the vertex on the stack and mark them.
+- to find adjacent vertices, go through row of that vertex in adjacency matrix. If found 1 / True, then it is a neighbor.
+- Repeat steps 3 to 5 until the stack is empty.
+
+### BFS (Breadth First Search) for Graph 
+
+- choose a vertex as start vertex.
+- Push start vertex on *queue* and mark it.
+- to mark, use an Boolean array with size = vertices
+- Pop vertex from queue.
+- Visit (Print) the vertex.
+- Pull all non-visited neighbors of the vertex on the queue and mark them.
+- to find adjacent vertices, go through row of that vertex in adjacency matrix. If found 1 / True, then it is a neighbor.
+- Repeat steps 3 to 5 until the queue is empty.
+
+### Spanning Tree
+
+- Tree is a graph without cycles.
+- Spanning tree is connected sub-graph of the given graph, that contains all the vertices and sub-set of edges(V-1).
+- It is a graph that can be formed after removing one or more edges so that sub-graph remains connected and does not contains a cycle.
 
 ## Questions
 
