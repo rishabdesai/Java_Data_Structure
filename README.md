@@ -2,7 +2,7 @@
 Data Structure using Java
 
 1. [Searching](#Searching)
-	* [Linear Search](#Linear_Search))
+	* [Linear Search](#Linear_Search)
 	* [Binary Search](#Binary_Search)
 	
 2. [Sorting](#Sorting)
@@ -13,9 +13,22 @@ Data Structure using Java
 	* [Merge_Sort](#Merge_Sort)
 	
 3. [Stack & Queue](#Stack&Queue)
+	* [Stack](#Stack)	
+	* [Queue](#Queue)
+	
 4. [Tree](#Tree)
+	* [BST](#BST)
+	* [DFS](#DFS)
+	* [BFS](#BFS)
+	
+	
 5. [Graph](#Graph)
+	* [DFS](#DFS)
+	* [BFS](#BFS)
+	* [Spanning_Tree](#Spanning_Tree)
+
 6. [Questions](#Questions)
+
 7. [Ref](#Ref)
 
 ## Searching
@@ -104,14 +117,16 @@ Divide the whole array into two equal parts. Sort the two parts separately and M
 
 ## Tree
 
-### BST (Binary Search Tree)
+### BST
 
 ![tree](https://github.com/rishabdesai/Java_Data_Structure/blob/5be5f2292ae79cbdc1d25c82c5ab82dc21e84bb5/images/Tree.png)
 
+-  (Binary Search Tree) fro tree
 - add,recPreOrder, recInOrder, recPostOrder, recHeight, recSearch, delTree  
 
-### DFS (Depth First Search) for Tree
+### DFS
 
+- (Depth First Search) for Tree
 - use stack<Node>
 - push root on stack
 - pop a node from stack  - say trav
@@ -120,17 +135,18 @@ Divide the whole array into two equal parts. Sort the two parts separately and M
 - if trav has left child, then push it on stack
 - repeat steps 2to5, until stack is empty. 
 
-### BFS (Breadth First Search) for Tree
+### BFS
 
+- (Breadth First Search) for Tree
 - Same as DFS, but use Queue and first push left on stack and then right.
-
 
 ## Graph
 
 ![graph](https://github.com/rishabdesai/Java_Data_Structure/blob/e2b2bc4f2be7aa73e3eb73acb223a8db2d0ea868/images/graphs.png)
 
-### DFS (Depth First Search) for Graph
+### DFS 
 
+- (Depth First Search) for Graph
 - choose a vertex as start vertex.
 - Push start vertex on *stack* and mark it.
 - to mark, use an Boolean array with size = vertices
@@ -140,8 +156,9 @@ Divide the whole array into two equal parts. Sort the two parts separately and M
 - to find adjacent vertices, go through row of that vertex in adjacency matrix. If found 1 / True, then it is a neighbor.
 - Repeat steps 3 to 5 until the stack is empty.
 
-### BFS (Breadth First Search) for Graph 
+### BFS
 
+- (Breadth First Search) for Graph 
 - choose a vertex as start vertex.
 - Push start vertex on *queue* and mark it.
 - to mark, use an Boolean array with size = vertices
@@ -151,7 +168,7 @@ Divide the whole array into two equal parts. Sort the two parts separately and M
 - to find adjacent vertices, go through row of that vertex in adjacency matrix. If found 1 / True, then it is a neighbor.
 - Repeat steps 3 to 5 until the queue is empty.
 
-### Spanning Tree
+### Spanning_Tree
 
 - Tree is a graph without cycles.
 - Spanning tree is connected sub-graph of the given graph, that contains all the vertices and sub-set of edges(V-1).
