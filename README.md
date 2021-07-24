@@ -104,6 +104,8 @@ Divide the whole array into two equal parts. Sort the two parts separately and M
 
 ## Graph
 
+![graph](https://github.com/rishabdesai/Java_Data_Structure/blob/e2b2bc4f2be7aa73e3eb73acb223a8db2d0ea868/images/graphs.png)
+
 ### DFS (Depth First Search) for Graph
 
 - choose a vertex as start vertex.
