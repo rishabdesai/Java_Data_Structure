@@ -1,11 +1,18 @@
 # Java_Data_Structure
 Data Structure using Java
 
-1. [Searching](#Searching)
-	* [Linear Search](#Linear Search))
-	* [Binary Search](#Binary Search)
-2. [Sorting](#Sorting)
-3. [Stack&Queue](#Stack&Queue)
+1. ![Searching](#Searching)
+	* ![Linear Search](#Linear_Search))
+	* ![Binary Search](#Binary_Search)
+	
+2. ![Sorting](#Sorting)
+	* ![Selection_Sort](#Selection_Sort)
+	* ![Bubble_Sort](#Bubble_Sort)
+	* [Insertion_sort](#Insertion_sort)
+	* [Quick_Sort](#Quick_Sort)
+	* [Merge_Sort](#Merge_Sort)
+	
+3. [Stack & Queue](#Stack&Queue)
 4. [Tree](#Tree)
 5. [Graph](#Graph)
 6. [Questions](#Questions)
@@ -13,13 +20,13 @@ Data Structure using Java
 
 ## Searching
 
-### Linear Search
+### Linear_Search
 
 - O(n)
 we can use it to search element in any sorted as well as un-sorted collection.
 If collection contains less no. of elements, then linear search is efficient.
 
-### Binary Search
+### Binary_Search
 
 - O(log n)
 To overcome limitation of linear search, use binary search.
@@ -28,19 +35,19 @@ Binary search is based on divide & conquer technique.
 
 ## Sorting
 
-### Selection Sort
+### Selection_Sort
 
 - O(n2)
 The algorithm divides the input list into two parts; the sorted list which is built up to left-side and on right-side is rest of unsorted list. Initially sorted list is empty and unsorted list is the entire input list.
 The algorithm proceeds by finding the smallest element in the unsorted sub-list, and swapping it with the leftmost element, and moving the sub-list boundaries one element to the right.
 
-### Bubble Sort
+### Bubble_Sort
 
 - O(n2)
 Compares each pair of adjacent items and swap then if they are in wrong order.
 The pass through the list is repeated until no swaps are needed, which indicates that the list is sorted.
 
-### Insertion sort
+### Insertion_sort
 
 - O(n2)
 Single element by default is sorted.
@@ -50,7 +57,7 @@ If no element left to compare, then increment key (i+1) position.
 
 efficient for small data sets.
 
-### Quick Sort
+### Quick_Sort
 
 - O(n2)
 Its implementation is based on divide & conquer technique.
@@ -66,7 +73,7 @@ Idea is to select any element in the list (say first) and call it pivot. Place t
 8. apply quick sort to left partition
 9. apply quick sort to right partition.
 
-### Merge Sort
+### Merge_Sort
 
 - O(nlog n)
 Divide the whole array into two equal parts. Sort the two parts separately and Merge the two array in temporary array. Copy the temporary array into original array.
