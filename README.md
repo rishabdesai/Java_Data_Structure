@@ -1,13 +1,13 @@
 # Java_Data_Structure
 Data Structure using Java
 
-1. ![Searching](#Searching)
-	* ![Linear Search](#Linear_Search))
-	* ![Binary Search](#Binary_Search)
+1. [Searching](#Searching)
+	* [Linear Search](#Linear_Search))
+	* [Binary Search](#Binary_Search)
 	
-2. ![Sorting](#Sorting)
-	* ![Selection_Sort](#Selection_Sort)
-	* ![Bubble_Sort](#Bubble_Sort)
+2. [Sorting](#Sorting)
+	* [Selection_Sort](#Selection_Sort)
+	* [Bubble_Sort](#Bubble_Sort)
 	* [Insertion_sort](#Insertion_sort)
 	* [Quick_Sort](#Quick_Sort)
 	* [Merge_Sort](#Merge_Sort)
