@@ -1,13 +1,14 @@
-// DFS using adj matrix
+//BFS using Adj matrix.
 package graph;
 
-import java.util.Stack;
+import java.util.LinkedList;
+import java.util.Queue;
 
-class DFSgraph {
+class BFSgraph {
 	private boolean adjMatrix[][];
 	private int numVertices;
 
-	public DFSgraph(int numVertices) {
+	public BFSgraph(int numVertices) {
 		this.numVertices = numVertices;
 		adjMatrix = new boolean[numVertices][numVertices];
 	}
@@ -27,30 +28,30 @@ class DFSgraph {
 		}
 	}
 
-	public void dfsTrav(int start) {
-		Stack<Integer> s = new Stack<>(); // 1. create stack of vertices
-		boolean[] marked = new boolean[numVertices];//2.create array to mark vertices.
-		s.push(start); // 3. push starting vertex on stack and mark it
+	public void bfsTrav(int start) {
+		Queue<Integer> s = new LinkedList<>(); // 1. create queue of vertices
+		boolean[] marked = new boolean[numVertices];// 2.create array to mark vertices.
+		s.offer(start); // 3. push starting vertex on queue and mark it
 		marked[start] = true;
 		while (!s.isEmpty()) {
-			int trav = s.pop(); // 4.pop a vertex from stack -say trav
+			int trav = s.poll(); // 4.pop a vertex from queue -say trav
 			System.out.print(trav + " "); // 5. print the vertex
-			// 6. find all not marked vertices and push on stack and mark them.
+			// 6. find all not marked adjacent vertices & push on queue & mark them.
 			for (int to = 0; to < numVertices; to++) {
 				if (adjMatrix[trav][to] == true && !marked[to]) {
-					s.push(to);
+					s.offer(to);
 					marked[to] = true;
 				}
 			}
-		} // 7. repeat 4 to 6 till stack is empty.
+		} // 7. repeat 4 to 6 till queue is empty.
 		System.out.println();
 	}
 }
 
-public class DepthFirstSearch {
-	public static void main(String[] args) {
+public class BreadthFirstSearch {
 
-		DFSgraph g = new DFSgraph(6);
+	public static void main(String[] args) {
+		BFSgraph g = new BFSgraph(6);
 		g.addEdge(0, 1);
 		g.addEdge(0, 2);
 		g.addEdge(0, 3);
@@ -59,11 +60,10 @@ public class DepthFirstSearch {
 		g.addEdge(3, 4);
 		g.addEdge(3, 5);
 		g.display();
-		
-		System.out.println();
-		System.out.print("DFS trav :   ");
-		g.dfsTrav(0);
 
+		System.out.println();
+		System.out.print("BFS trav :   ");
+		g.bfsTrav(0);
 	}
 
 }

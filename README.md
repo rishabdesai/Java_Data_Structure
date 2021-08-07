@@ -145,6 +145,7 @@ Divide the whole array into two equal parts. Sort the two parts separately and M
 ![graph](https://github.com/rishabdesai/Java_Data_Structure/blob/e2b2bc4f2be7aa73e3eb73acb223a8db2d0ea868/images/graphs.png)
 
 ### DFS_Graph 
+[code Link](https://github.com/rishabdesai/Java_Data_Structure/blob/master/src/graph/DepthFirstSearch.java)
 
 - (Depth First Search) for Graph
 1. create stack of vertices
@@ -158,6 +159,7 @@ Divide the whole array into two equal parts. Sort the two parts separately and M
 
 
 ### BFS_Graph
+
 
 - (Breadth First Search) for Graph 
 - choose a vertex as start vertex.
