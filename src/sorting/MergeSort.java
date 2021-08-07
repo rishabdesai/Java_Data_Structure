@@ -6,14 +6,14 @@ public class MergeSort {
 		if (left >= right)
 			return;
 		
-		// divide array in two equal partitions
+		//1. divide array in two equal partitions
 		int mid = (left + right) / 2;
-		// apply merge sort to left and right partition
+		//2. apply merge sort to left and right partition
 		mergeSort(arr, left, mid);
 		mergeSort(arr, mid + 1, right);
-		// create temp array to accommodate both the array
+		//3. create temp array to accommodate both the array
 		int[] temp = new int[right - left + 1];
-		// merge both sorted array in to temp array
+		//4. merge both sorted array in to temp array
 		int i = left;
 		int j = mid + 1;
 		int k = 0;
@@ -27,7 +27,7 @@ public class MergeSort {
 			temp[k++] = arr[i++];
 		while (j <= right) 
 			temp[k++] = arr[j++];
-		// override temp array to main array
+		//5. override temp array to main array
 		for (i = 0; i < temp.length; i++) 
 			arr[left + i] = temp[i];
 	}
