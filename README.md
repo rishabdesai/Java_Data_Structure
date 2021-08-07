@@ -23,8 +23,8 @@ Data Structure using Java
 	
 	
 5. [Graph](#Graph)
-	* [DFS](#DFS)
-	* [BFS](#BFS)
+	* [DFS_Graph](#DFS_Graph)
+	* [BFS_Graph](#BFS_Graph)
 	* [Spanning_Tree](#Spanning_Tree)
 
 6. [Questions](#Questions)
@@ -144,7 +144,7 @@ Divide the whole array into two equal parts. Sort the two parts separately and M
 
 ![graph](https://github.com/rishabdesai/Java_Data_Structure/blob/e2b2bc4f2be7aa73e3eb73acb223a8db2d0ea868/images/graphs.png)
 
-### DFS 
+### DFS_Graph 
 
 - (Depth First Search) for Graph
 1. create stack of vertices
@@ -157,7 +157,7 @@ Divide the whole array into two equal parts. Sort the two parts separately and M
 7. Repeat steps 4 to 6 until the stack is empty.
 
 
-### BFS
+### BFS_Graph
 
 - (Breadth First Search) for Graph 
 - choose a vertex as start vertex.
