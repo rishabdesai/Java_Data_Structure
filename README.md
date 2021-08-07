@@ -147,14 +147,15 @@ Divide the whole array into two equal parts. Sort the two parts separately and M
 ### DFS 
 
 - (Depth First Search) for Graph
-- choose a vertex as start vertex.
-- Push start vertex on *stack* and mark it.
-- to mark, use an Boolean array with size = vertices
-- Pop vertex from stack.
-- Visit (Print) the vertex.
-- Pull all non-visited neighbors of the vertex on the stack and mark them.
-- to find adjacent vertices, go through row of that vertex in adjacency matrix. If found 1 / True, then it is a neighbor.
-- Repeat steps 3 to 5 until the stack is empty.
+1. create stack of vertices
+2. Push start vertex on *stack* and mark it.
+3. create an boolean array to mark the vertices.
+4. Pop vertex from stack - say trav.
+5. Print the vertex.
+6. find all not marked vertices and push on stack and mark them. 
+	(to find adjacent vertices, go through row of that vertex in adjacency matrix. If found 1 / True, then it is a neighbor.)
+7. Repeat steps 4 to 6 until the stack is empty.
+
 
 ### BFS
 

@@ -1,4 +1,4 @@
-package graph;
+ package graph;
 
 class AdjMatrix {
 	private boolean adjMatrix[][];
